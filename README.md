@@ -13,7 +13,7 @@ uintw_t f3(uintw_t x, int a, int b) {
   return (x >> a) ^ (x << b);
 }
 ```
-`shiftinverses-w-RRL.txt` is the table with all triples RRL/LLR that will result in a bijection on 2^w:
+`shiftinverses-w-RRL.txt.bz2` is the table with all triples RRL/LLR that will result in a bijection on 2^w:
 ```
 uintw_t f5_1(uintw_t x, int a, int b, int c) {
   return (x >> a) ^ (x >> b) ^ (x << c);
@@ -24,7 +24,7 @@ uintw_t f5_2(uintw_t x, int a, int b, int c) {
 }
 ```
 
-`shiftinverses-w-RRLL.txt` is the table with all quads RRLL/LLRR that will result in a bijection on 2^w:
+`shiftinverses-w-RRLL.txt.bz2` is the table with all quads RRLL/LLRR that will result in a bijection on 2^w:
 ```
 uintw_t f7_1(uintw_t x, int a, int b, int c, int d) {
   return (x >> a) ^ (x >> b) ^ (x << c) ^ (x << d);
@@ -35,7 +35,7 @@ uintw_t f7_2(uintw_t x, int a, int b, int c, int d) {
 }
 ```
 
-`shiftinverses-w-RRRL.txt` is the table with all quads RRRL/LLLR that will result in a bijection on 2^w:
+`shiftinverses-w-RRRL.txt.bz2` is the table with all quads RRRL/LLLR that will result in a bijection on 2^w:
 ```
 uintw_t f8_1(uintw_t x, int a, int b, int c, int d) {
   return (x >> a) ^ (x >> b) ^ (x >> c) ^ (x << d);
