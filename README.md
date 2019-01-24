@@ -9,9 +9,14 @@ Assuming C, `uintw_t` being an unsigned word of w bits:
 
 `shiftinverses-w-RL.txt.bz2` is the table with all pairs RL/LR that will result in a bijection on 2^w:
 ```
-uintw_t f3(uintw_t x, int a, int b) {
+uintw_t f3_1(uintw_t x, int a, int b) {
   return (x >> a) ^ (x << b);
 }
+// Or f3-variant 2:
+uintw_t f3_2(uintw_t x, int a, int b) {
+  return (x << a) ^ (x >> b);
+}
+
 ```
 `shiftinverses-w-RRL.txt.bz2` is the table with all triples RRL/LLR that will result in a bijection on 2^w:
 ```
