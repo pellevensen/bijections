@@ -10,43 +10,43 @@ Assuming C, `uintw_t` being an unsigned word of w bits:
 `shiftinverses-w-RL.txt.bz2` is the table with all pairs RL/LR that will result in a bijection on 2^w:
 ```
 uintw_t f3_1(uintw_t x, int a, int b) {
-  return (x >> a) ^ (x << b);
+  return x ^ (x >> a) ^ (x << b);
 }
 // Or f3-variant 2:
 uintw_t f3_2(uintw_t x, int a, int b) {
-  return (x << a) ^ (x >> b);
+  return x ^ (x << a) ^ (x >> b);
 }
 
 ```
 `shiftinverses-w-RRL.txt.bz2` is the table with all triples RRL/LLR that will result in a bijection on 2^w:
 ```
 uintw_t f5_1(uintw_t x, int a, int b, int c) {
-  return (x >> a) ^ (x >> b) ^ (x << c);
+  return x ^ (x >> a) ^ (x >> b) ^ (x << c);
 }
 // Or f5-variant 2:
 uintw_t f5_2(uintw_t x, int a, int b, int c) {
-  return (x << a) ^ (x << b) ^ (x >> c);
+  return x ^ (x << a) ^ (x << b) ^ (x >> c);
 }
 ```
 
 `shiftinverses-w-RRLL.txt.bz2` is the table with all quads RRLL/LLRR that will result in a bijection on 2^w:
 ```
 uintw_t f7_1(uintw_t x, int a, int b, int c, int d) {
-  return (x >> a) ^ (x >> b) ^ (x << c) ^ (x << d);
+  return x ^ (x >> a) ^ (x >> b) ^ (x << c) ^ (x << d);
 }
 // Or f7-variant 2:
 uintw_t f7_2(uintw_t x, int a, int b, int c, int d) {
-  return (x << a) ^ (x << b) ^ (x >> c) ^ (x >> d);
+  return x ^ (x << a) ^ (x << b) ^ (x >> c) ^ (x >> d);
 }
 ```
 
 `shiftinverses-w-RRRL.txt.bz2` is the table with all quads RRRL/LLLR that will result in a bijection on 2^w:
 ```
 uintw_t f8_1(uintw_t x, int a, int b, int c, int d) {
-  return (x >> a) ^ (x >> b) ^ (x >> c) ^ (x << d);
+  return x ^ (x >> a) ^ (x >> b) ^ (x >> c) ^ (x << d);
 }
 // Or f8-variant 2:
 uintw_t f8_2(uintw_t x, int a, int b, int c, int d) {
-  return (x << a) ^ (x << b) ^ (x << c) ^ (x >> d);
+  return x ^ (x << a) ^ (x << b) ^ (x << c) ^ (x >> d);
 }
 ```
